@@ -12,3 +12,15 @@
 #user_info{
     margin-top: 10%;
 }
+
+
+#searchbox{
+    margin-left: 15%;
+    width: 60%;
+    float: left;
+}
+
+#input-group{
+    margin-top: 20px;
+    width: 100%;
+}

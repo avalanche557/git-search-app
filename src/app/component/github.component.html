@@ -4,14 +4,13 @@
 <div class="row">
         <div class="col-md-12">
             <form>
-               <div class="input-group">
-                   <span class="input-group-addon" id="sizing-addon2">@</span>
-                   <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" aria-describedby="sizing-addon2" >
-                   <button (click)="onClickMe()">Click me!</button>
+               <div class="input-group" id= "input-group">
+                   <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" id="searchbox" (keyup.enter)="search()">
+                   <button class="btn btn-default" (click)="search()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                </div>
            </form>
        </div>
-   </div>
+</div>
     <div class="container">
     <div *ngIf="user">
             <div class="panel panel-default" id = "user_info">

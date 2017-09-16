@@ -17,7 +17,7 @@ export class GithubComponent {
         console.log("loading....");
 
     }
-    onClickMe(){
+    search(){
         this._githubservice.updateusername(this.username);
 
         console.log(this.username);
