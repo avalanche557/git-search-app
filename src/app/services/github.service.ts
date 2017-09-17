@@ -9,9 +9,10 @@ export class GithubService {
     private username = 'TAM009' ;
     private client_id = '9dbdc8f265d8247fc11a';
     private client_secret = '2a17a875a8f577641e1d740276108eaddf5db800';
+    private language = 'javascript';
 
     constructor(private _http:Http){
-        //console.log('github service');
+        console.log('github service');
     }
 
         getUser(){
@@ -27,4 +28,11 @@ export class GithubService {
         updateusername(username:string){
             this.username = username;
         }
+
+        getLanguageRepo(){
+            return this._http.get('https://api.github.com/search/repositories?q=+language:'+this.language+'&sort=stars&order=desc')
+            .map(res => res.json());
+        }
+
+        
 }

@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 
 
 import { GithubComponent } from './component/github.component';
+
+import { AdvanceComponent } from './component/advance.component';
+
 import { GithubService } from './services/github.service';
 
 
@@ -15,6 +18,7 @@ import { GithubService } from './services/github.service';
   declarations: [
     AppComponent,
     GithubComponent,
+    AdvanceComponent
   ],
   imports: [
     BrowserModule,

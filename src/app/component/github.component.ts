@@ -12,6 +12,7 @@ export class GithubComponent {
     user:any;
     repos:any;
     username: string;
+    stared: any;
 
     constructor(private _githubservice: GithubService){
         console.log("loading....");
