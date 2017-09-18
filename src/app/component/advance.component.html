@@ -9,4 +9,32 @@
                 <p>Most Stared Repo In... </p><input type="text" class="form-control" placeholder="Search Language" [(ngModel)]="languagename" name="languagename" id="searchbox" (keyup.enter)="onClick()">    
         </div>
     </div>
+    <div *ngIf="languagename">
+        <div class="panel panel-default" id="repopanel">
+            <div class="panel-heading">
+                <h3 class="panel-title">10 Most Stared Repo Of {{languagename}}</h3>
+            </div>
+        </div>
+        <div *ngFor="let star of stared ; let i=index">
+            <div *ngIf="i<10">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="{{star.html_url}}" target="_blank"><h4>{{star.full_name}}</h4></a>
+                    <p>{{star.description}}</p>
+                    <br>
+                    <button type="button" class="btn btn-default btn-xs">{{star.language}}</button>
+                    <a href="{{star.homepage}}"> <button type="button" class="btn btn-default btn-xs">Website</button></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="{{star.starred_url}}" target="_blank"><span class="glyphicon glyphicon-star"></span> <span class="badge">{{star.watchers_count}}</span></a>
+                </div>
+                <div class="col-md-2">
+                        <button type="button" class="btn btn-primary btn-sm">Save</button>
+                        
+                </div>
+            </div>
+            <hr>
+            </div>
+        </div>
+    </div>
 </div>

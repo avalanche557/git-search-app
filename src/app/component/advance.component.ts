@@ -12,7 +12,7 @@ import { AdvanceService } from '../services/advance.service';
 
 
 export class AdvanceComponent{
-    stared: any;
+    stared: any = [];
     languagename: any;
 
     constructor(private _advanceservice: AdvanceService){
@@ -25,6 +25,7 @@ export class AdvanceComponent{
     
     this._advanceservice.getLanguageRepo().subscribe(stared => {
         console.log(stared);
+        this.stared = stared;        
     })
     }
-}
+}  

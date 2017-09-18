@@ -11,6 +11,13 @@
     margin-left: 5px;
 }
 
-#user_details{
+#signin{
+    float: right;
+    margin-top: 10px;
+}
 
+#signup{
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
 }
