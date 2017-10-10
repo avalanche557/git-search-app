@@ -1,0 +1,105 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">GitHub Search</a>
+      </div>
+      
+      <ul class="nav navbar-nav">
+            <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/advance" routerLinkActive="active">Advance Search</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#signupModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Login to save Repo</h4>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="email">Email address:</label>
+                              <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Password">
+                            </div>
+                            <div class="checkbox">
+                              <label><input type="checkbox"> Remember me</label>
+                            </div>
+                          </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+      <div id="signupModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+          
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                        <form>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                        <label for="email">First Name</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Ex:Abhinav">
+                                        </div>
+                                        <div class="col-md-6">
+                                        <label for="email">Last Name</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Ex:Karna">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <label for="email">Username</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Username">
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="email">Email address:</label>
+                                  <input type="email" class="form-control" id="email" placeholder="example@example.com">
+                                </div>
+                                <div class="form-group">
+                                  <label for="pwd">Password:</label>
+                                  <input type="password" class="form-control" id="pwd" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                        <label for="pwd">Confirm Password:</label>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Retype Password">
+                                </div>
+
+                                <div class="radio">
+                                        <label><input type="radio" name="optradio">Male</label>
+                                </div>
+                                <div class="radio">
+                                        <label><input type="radio" name="optradio">Female</label>
+                                      </div>
+                              </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Sign Up</button>
+                </div>
+              </div>
+          
+            </div>
+          </div>
