@@ -27,7 +27,7 @@
                     <a href="{{star.starred_url}}" target="_blank"><span class="glyphicon glyphicon-star"></span> <span class="badge">{{star.watchers_count}}</span></a>
                 </div>
                 <div class="col-md-2">
-                        <button type="button" class="btn btn-primary btn-sm">Save</button>
+                        <button type="button" class="btn btn-primary btn-sm" (click)="onSave(star)">Save</button>
                         
                 </div>
             </div>

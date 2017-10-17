@@ -17,6 +17,10 @@ import { AdvanceComponent } from './component/advance.component';
 
 import { GithubService } from './services/github.service';
 
+import { SavedRepoComponent } from './component/savedrepo.component'
+
+import { SavedRepoService } from './services/savedrepo.service'
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { GithubService } from './services/github.service';
     GithubComponent,
     AdvanceComponent,
     NavbarComponent,
+    SavedRepoComponent,
   ],
   imports: [
     BrowserModule,

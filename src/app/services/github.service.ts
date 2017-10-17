@@ -29,10 +29,5 @@ export class GithubService {
             this.username = username;
         }
 
-        getLanguageRepo(){
-            return this._http.get('https://api.github.com/search/repositories?q=+language:'+this.language+'&sort=stars&order=desc')
-            .map(res => res.json());
-        }
-
         
 }

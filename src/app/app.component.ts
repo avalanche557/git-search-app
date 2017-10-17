@@ -7,6 +7,8 @@ import { GithubComponent } from './component/github.component';
 
 import { AdvanceComponent } from './component/advance.component';
 
+import { SavedRepoComponent } from './component/savedrepo.component';
+
 import { appRouterModule } from './app.route';
 import{ HttpModule } from '@angular/http'; 
 
