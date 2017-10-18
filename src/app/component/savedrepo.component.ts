@@ -12,22 +12,25 @@ import { AdvanceService } from '../services/advance.service';
 
 export class SavedRepoComponent implements OnInit{
     data:any;
-
+    getList(){
+        this._savedrepo.getSavedRepo().subscribe(saved => {
+            console.log(saved);
+            this.saved = saved; 
+        });
+    }
     ngOnInit(){
-        
+        this.getList();
     }
     title: 'saved repo';
     saved:any;
 
     constructor(private _savedrepo: AdvanceService){
-        this._savedrepo.getSavedRepo().subscribe(saved => {
-            console.log(saved);
-            this.saved = saved; 
-        });
+        
 
     }
 
-    delete(saved): void{
-        this._savedrepo.deleterepo(saved).then(this.saved = null);
+    delete(id:any): void{
+        this._savedrepo.deleterepo(id).then(() => this.getList());
+        // this.getList();
     }
 }

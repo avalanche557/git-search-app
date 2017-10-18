@@ -19,7 +19,6 @@ import { GithubService } from './services/github.service';
 
 import { SavedRepoComponent } from './component/savedrepo.component'
 
-import { SavedRepoService } from './services/savedrepo.service'
 
 
 @NgModule({

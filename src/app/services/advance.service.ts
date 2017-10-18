@@ -36,11 +36,13 @@ export class AdvanceService{
         return this._http.get('http://localhost:8080/gitsearch/repo').map((res: Response)=>res.json());
     }
 
-    deleterepo(data:any){
+    deleterepo(id:any){
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-        const url = `http://localhost:8080/gitsearch/delete/${data.id}`;
-        return this._http.get(url, options).toPromise().then(()=>null);
+        const url = `http://localhost:8080/gitsearch/delete/${id}`;
+        console.log(url);
+        return this._http.delete(url, options).toPromise().then(()=>null);
+        
     }
    
 

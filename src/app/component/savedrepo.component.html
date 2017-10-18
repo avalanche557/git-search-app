@@ -1,6 +1,5 @@
 <h3>Saved Repo</h3>
-<div *ngFor="let save of saved ; let i=index">
-    <div *ngIf="i<10">
+<div *ngFor="let save of saved">
     <div class="row">
         <div class="col-md-8">
             <a href="{{save.html_url}}" target="_blank"><h4>{{save.full_name}}</h4></a>
@@ -13,10 +12,9 @@
             <a href="{{save.starred_url}}" target="_blank"><span class="glyphicon glyphicon-star"></span> <span class="badge">{{save.watchers_count}}</span></a>
         </div>
         <div class="col-md-2">
-                <button type="button" class="btn btn-primary btn-sm" (click)="remove(save.id)">Remove</button>
+                <button type="button" class="btn btn-primary btn-sm" (click)="delete(save.id)">Remove</button>
                 
         </div>
     </div>
     <hr>
-    </div>
 </div>
